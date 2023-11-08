@@ -31,7 +31,7 @@ const customTabBarStyle = {
 const MainTabNavigation = () => {
   return (
     <Tab.Navigator
-      initialRouteName="MainTabNavigation"
+      initialRouteName="Home"
       screenOptions={{ headerMode: "screen", tabBarShowLabel: false, }}
       className="pb-8"
     >

@@ -57,36 +57,6 @@ export default function App() {
   return (
     <PaperProvider>
       <Provider store={store}>
-        <PermissionStatus
-          READ_SMS_PERMISSION_STATUS={hasReadSMSPermission}
-          RECEIVE_SMS_PERMISSION_STATUS={hasReceiveSMSPermission}
-          requestReadSMSPermission={requestReadSMSPermission}
-        />
-        <DataTable.Row>
-          <DataTable.Cell>
-            <Text>smsPermissionState:</Text>
-          </DataTable.Cell>
-          <DataTable.Cell>{smsPermissionState + "" || "null"}</DataTable.Cell>
-        </DataTable.Row>
-        <DataTable.Row>
-          <DataTable.Cell>
-            <Text>smsValue:</Text>
-          </DataTable.Cell>
-          <DataTable.Cell>{smsValue + "" || "null"}</DataTable.Cell>
-        </DataTable.Row>
-        <DataTable.Row>
-          <DataTable.Cell>
-            <Text>smsError:</Text>
-          </DataTable.Cell>
-          <DataTable.Cell>{smsError + "" || "null"}</DataTable.Cell>
-        </DataTable.Row>
-
-        <Button onPress={checkPermissions} mode="contained">
-          Recheck permission state
-        </Button>
-        <Button onPress={buttonClickHandler} mode="contained">
-          Start
-        </Button>
         <RootNavigation />
       </Provider>
     </PaperProvider>
